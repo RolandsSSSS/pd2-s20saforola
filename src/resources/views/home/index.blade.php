@@ -3,6 +3,6 @@
 
 @section('content')
 
-    <h1>PD2 - {{ $title }}</h1>
+    <p>ši ir sākuma lapa</p>
 
 @endsection

@@ -3,8 +3,8 @@ mysql/
 
 src/vendor/
 src/node_modules
+src/public/images
 
 .vscode/
 .idea/
 .settings/
-/public/images

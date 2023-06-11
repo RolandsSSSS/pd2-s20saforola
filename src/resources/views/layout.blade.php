@@ -32,6 +32,10 @@
                         @if(Auth::check())
 
                             <li class="nav-item">
+                                <a class="nav-link" href="/movies">Filmas</a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link" href="/directors">Režisori</a>
                             </li>
 

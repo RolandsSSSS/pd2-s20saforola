@@ -35,12 +35,13 @@
             <div class="container">
                 <div class="row py-5">
                     <div class="col">
-                        R. Safonovs, 2023
+                        Rolands Safonovs, 2023
                     </div>
                 </div>
             </div>
         </footer>
-
+        
+        <script src="./js/admin.js"></script>
     </body>
 
 </html>

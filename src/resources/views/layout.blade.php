@@ -15,10 +15,25 @@
 
     <body>
 
-        <nav class="navbar bg-primary mb-3" data-bs-theme="dark">
-            <header class="container">
-                <a class="navbar-brand" href="#">PD2 - {{ $title }}</a>
-            </header>
+        <nav class="navbar navbar-expand-md bg-primary mb-3" data-bs-theme="dark">
+            <div class="container">
+                <span class="navbar-brand mb-0 h1">PD2</span>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Sākumlapa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/directors">Režisori</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         
         <main class="container">
@@ -41,6 +56,11 @@
             </div>
         </footer>
         
+        <script 
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+            crossorigin="anonymous"
+        ></script>
         <script src="./js/admin.js"></script>
     </body>
 

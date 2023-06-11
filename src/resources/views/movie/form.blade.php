@@ -12,7 +12,7 @@
         </div>
     @endif
 
-    <form method="post" action="{{ $movie->exists ? '/movies/patch/' . $movie->id : '/movies/put' }}">
+    <form method="post" action="{{ $movie->exists ? '/movies/patch/' . $movie->id : '/movies/put' }}" enctype="multipart/form-data">
         @csrf
 
 
@@ -51,6 +51,28 @@
 
             @error('director_id')
                 <p class="invalid-feedback">{{ $errors->first('director_id') }}</p>
+            @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="movie-genre" class="form-label">Žanrs</label>
+
+            <select
+                id="movie-genre"
+                name="genre_id"
+                class="form-select @error('genre_id') is-invalid @enderror"
+            >
+                <option value="">Norādiet žanru!</option>
+                    @foreach($genres as $genre)
+                        <option
+                            value="{{ $genre->id }}"
+                            @if ($genre->id == old('genre_id', $movie->genre->id ?? false)) selected @endif
+                        >{{ $genre->name }}</option>
+                    @endforeach
+            </select>
+
+            @error('genre_id')
+                <p class="invalid-feedback">{{ $errors->first('movie_id') }}</p>
             @enderror
         </div>
 
@@ -100,7 +122,28 @@
             @enderror
         </div>
 
-        //
+        <div class="mb-3">
+            <label for="movie-image" class="form-label">Attēls</label>
+
+            @if ($movie->image)
+                <img
+                    src="{{ asset('images/' . $movie->image) }}"
+                    class="img-fluid img-thumbnail d-block mb-2"
+                    alt="{{ $movie->name }}"
+                >
+            @endif
+
+            <input
+                type="file" accept="image/png, image/jpeg"
+                id="movie-image"
+                name="image"
+                class="form-control @error('image') is-invalid @enderror"
+            >
+
+            @error('image')
+                <p class="invalid-feedback">{{ $errors->first('image') }}</p>
+            @enderror
+        </div>
 
         <div class="mb-3">
             <div class="form-check">

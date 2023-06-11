@@ -14,6 +14,7 @@
                     <th>ID</th>
                     <th>Nosaukums</th>
                     <th>Režisors</th>
+                    <th>Žanrs</th>
                     <th>Gads</th>
                     <th>Cena</th>
                     <th>Publicēts</th>
@@ -27,6 +28,7 @@
                         <td>{{ $movie->id }}</td>
                         <td>{{ $movie->name }}</td>
                         <td>{{ $movie->director->name }}</td>
+                        <td>{{ optional($movie->genre)->name }}</td>
                         <td>{{ $movie->year }}</td>
                         <td>&euro; {{ number_format($movie->price, 2, '.') }}</td>
                         <td>{!! $movie->display ? '&#10004;&#65039;' : '&#10060;' !!}</td>

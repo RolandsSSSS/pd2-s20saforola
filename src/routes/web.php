@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DirectorController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,8 @@ Route::post('/directors/put', [DirectorController::class, 'put']);
 Route::get('/directors/update/{director}', [DirectorController::class, 'update']);
 Route::post('/directors/patch/{director}', [DirectorController::class, 'patch']);
 Route::post('/directors/delete/{director}', [DirectorController::class, 'delete']);
+
+// Auth routes
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/authenticate', [AuthController::class, 'authenticate']);
+Route::get('/logout', [AuthController::class, 'logout']);

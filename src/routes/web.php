@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\DataController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,3 +50,11 @@ Route::post('/genres/delete/{genre}', [GenreController::class, 'delete']);
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/authenticate', [AuthController::class, 'authenticate']);
 Route::get('/logout', [AuthController::class, 'logout']);
+
+// Data routes
+Route::prefix('data')->group(function(){
+    Route::get('/get-top-movies', [DataController::class, 'getTopMovies']);
+    Route::get('/get-movie/{movie}', [DataController::class, 'getMovie']);
+    Route::get('/get-related-movies/{movie}', [DataController::class, 'getRelatedMovies']);
+});
+

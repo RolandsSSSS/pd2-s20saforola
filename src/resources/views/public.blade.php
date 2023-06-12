@@ -16,7 +16,7 @@
     </head>
 
     <body>
-    <nav class="navbar navbar-expand-md bg-primary mb-3" data-bs-theme="dark">
+    <nav class="navbar bg-dark navbar-expand-md bg-primary mb-3" data-bs-theme="dark">
             <div class="container">
                 <span class="navbar-brand mb-0 h1">PD2 - {{ $title }}</span>
 

@@ -1,4 +1,4 @@
-
+https://8e37-94-140-104-30.ngrok-free.app
 # PD2 Sagatave
 
 Šis repo paredzēts tiem, kas zina, kas ir PD2.
